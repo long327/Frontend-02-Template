@@ -1,0 +1,5 @@
+1.first-letter和first-line都作用于块级元；
+
+2.first-letter:作用于第一行的首字符；
+
+3.first-line：作用于第一行的所有字符；
