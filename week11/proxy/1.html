@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proxy与双向绑定 | 基本用法</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            a: 1,
+            b: '123'
+        }
+
+        let po = new Proxy(obj, {
+            set(o, p, v) {
+                console.log(o, p, v);
+            }
+        })
+    </script>
+</body>
+</html>

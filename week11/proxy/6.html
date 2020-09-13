@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用Range实现DOM精确操作 | 基本拖拽</title>
+    <style>
+        #dragable{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div id="dragable"></div>
+
+    <script>
+        let dragable = document.getElementById('dragable');
+        let baseX = 0, baseY = 0;
+        dragable.addEventListener('mousedown', function(event) {
+            let startX = event.clientX, startY = event.clientY;
+
+            let up = () => {
+                baseX = baseX + event.clientX - startX;
+                baseY = baseY + event.clientY - startY;
+                document.addEventListener('mousemove', move)
+                document.addEventListener('mouseup', up)
+            };
+            let move = () => {
+                dragable.style.transform = `translate(${event.clientX - startX}px, ${event.clientY - startY}px)`
+            };
+
+            document.addEventListener('mousemove', move)
+            document.addEventListener('mouseup', up)
+        })
+
+    </script>
+</body>
+</html>
