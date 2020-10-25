@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation test</title>
+    <style>
+        .style1{
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            margin-top: 20px;
+        }
+        .style2{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="style1" id="el">
+        ease js
+    </div>
+    <div class="style1" id="el2">
+        ease css
+    </div>
+    <div class="style1 style2" id="el3">
+        default
+    </div>
+    <button id="pause-btn">pause</button>
+    <button id="resume-btn">resume</button>
+    <script type="module" src="./animation-demo.js"></script>
+</body>
+</html>
